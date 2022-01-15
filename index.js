@@ -23,9 +23,9 @@ app.use( "/posts", postRouter);
 app.use( "/users", usersRouter);
 
 // mongo db 
-//"C:\Program Files\MongoDB\Server\5.0\bin\mongod.exe" --dbpath="c:\data\db"
 
-const CONNECTION_URL = "mongodb+srv://mearnapp:mearnapp@cluster0.4qchc.mongodb.net/memorypost?retryWrites=true&w=majority";
+
+const CONNECTION_URL = process.env.MONGODB_CONECTION;
 
 const PORT = process.env.PPORT || 5000 ;
 
